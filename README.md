@@ -1,36 +1,23 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
 
-First, run the development server:
+## GastosApp Nombre provisorio
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+# Descripción
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Esta aplicación está diseñada para personas que desean llevar un control claro y ordenado de sus finanzas personales. Permite registrar ingresos y gastos mensuales, proporcionando un panorama completo de la situación económica del usuario y facilitando la toma de decisiones financieras más informadas.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# Características
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+**Registro de ingresos y gastos:** Agrega, edita y elimina entradas de dinero de forma sencilla.
 
-## Learn More
+**Resumen mensual:** Visualiza un resumen de tus finanzas cada mes, incluyendo total de ingresos, total de gastos y saldo.
 
-To learn more about Next.js, take a look at the following resources:
+**Visualizaciones claras:** Gráficos y tablas que permiten entender rápidamente cómo se distribuye tu dinero.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**Fácil de usar:** Interfaz intuitiva y amigable, ideal para cualquier usuario.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# Tecnologías Utilizadas Por el momento
 
-## Deploy on Vercel
+**Frontend:** NextJS
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Estilos:** Tailwind
