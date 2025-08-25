@@ -21,3 +21,5 @@ Esta aplicación está diseñada para personas que desean llevar un control clar
 **Frontend:** NextJS
 
 **Estilos:** Tailwind
+
+**librerías:** React-hook-form
