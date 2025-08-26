@@ -1,5 +1,3 @@
-
-
 ## GastosApp Nombre provisorio
 
 # Descripción
@@ -20,6 +18,10 @@ Esta aplicación está diseñada para personas que desean llevar un control clar
 
 **Frontend:** NextJS
 
+**Backend:** API Routes / Prisma / NextAuthJS
+
+**Base de Datos :** PostgreeSQL
+
 **Estilos:** Tailwind
 
-**librerías:** React-hook-form
+**librerías:** React-hook-form / bcrypt / sweetalert2
