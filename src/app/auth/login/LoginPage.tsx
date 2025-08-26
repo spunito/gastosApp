@@ -1,10 +1,33 @@
 "use client"; 
+import { signIn } from 'next-auth/react';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 import { useForm } from 'react-hook-form';
 
-export const LoginPage = () => {
+type LoginForm = {
+  email: string;
+  password: string;
+};
 
-  const {register , handleSubmit} = useForm();
+
+export const LoginPage = () => {
+  
+  const router = useRouter()
+  const {register , handleSubmit} = useForm<LoginForm>();
+
+  const onSubmit = async(data:LoginForm) => {
+    const res = await signIn("credentials" , {
+      email:data.email,
+      password:data.password,
+      redirect:false,
+    });
+
+    if (res?.ok) {
+      router.push("/gastos")
+    } else {
+      console.log("Error al iniciar sesión")
+    }
+  }
 
   return (
     
@@ -25,10 +48,7 @@ export const LoginPage = () => {
       <div className="w-1/2 flex items-center justify-center bg-gray-100">
         <form className="w-3/4 max-w-md p-8 bg-white rounded shadow" 
         
-        onSubmit={handleSubmit((data , e) => {
-          e?.preventDefault();
-          console.log(data);
-        })}>
+        onSubmit={handleSubmit(onSubmit)}>
           
           <h2 className="text-2xl font-bold mb-6">Inicia sesión</h2>
           <input

@@ -30,6 +30,8 @@ export const RegisterPage = () => {
       console.log(json);
     };
 
+    
+
   return (
     <>
         <div className='flex min-h-screen'>
