@@ -8,8 +8,8 @@ export const Home = () => {
     <>
 
       <Navbar/>
-      <div className="bg-gray-800 min-h-screen" style={{ minHeight: "calc(10vh - 200px)" }}>
-        <div className="flex flex-col md:flex-row justify-center items-center px-6 min-h-screen bg-red-500 max-w-6xl mx-auto">
+      <div className="bg-gray-800 min-h-screen">
+        <div className="flex flex-col md:flex-row justify-center items-center px-6 min-h-screen bg-red-500 max-w-7xl mx-auto">
           {/* Texto */}
           <div className="w-full md:w-1/2 flex justify-center mb-6 md:mb-0">  
 

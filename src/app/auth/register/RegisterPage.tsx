@@ -1,10 +1,34 @@
 "use client";
 import Image from 'next/image';
+import Link from 'next/link';
 import { useForm } from 'react-hook-form';
+
+type FormValues = {
+  name: string;
+  email: string;
+  password: string;
+  password2: string;
+};
 
 export const RegisterPage = () => {
     
-    const {register , handleSubmit} = useForm();
+    const {
+      register , 
+      handleSubmit , 
+      formState: { errors }} 
+      = useForm<FormValues>();
+
+    const onSubmit = async(data: FormValues) => {
+      const res = await fetch('/api/auth/register',{
+        method:"POST",
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+      const json = await res.json();
+      console.log(json);
+    };
 
   return (
     <>
@@ -24,14 +48,11 @@ export const RegisterPage = () => {
           <div className="w-1/2 flex items-center justify-center bg-gray-100">
             <form className="w-3/4 max-w-md p-8 bg-white rounded shadow" 
             
-            onSubmit={handleSubmit((data , e) => {
-              e?.preventDefault();
-              console.log(data);
-            })}>
+            onSubmit={handleSubmit((onSubmit))}>
               
               <h2 className="text-2xl font-bold mb-6">Regístrate</h2>
               <input
-                {...register("nombre")}
+                {...register("name")}
                 type="text"
                 placeholder="Introduce tu nombre o nombre de usuario"
                 className="w-full mb-4 p-3 border border-gray-300 rounded"
@@ -60,10 +81,7 @@ export const RegisterPage = () => {
               {/* Texto para registrarse */}
               <p className="mt-4 text-center text-gray-600">
                 ¿Ya tienes cuenta?{" "}
-                <a href="/auth/login
-                " className="text-blue-600 hover:underline">
-                  Iniciar sesión
-                </a>
+                <Link href="/auth/login" className="text-blue-600 hover:underline">Iniciar sesión</Link>
               </p>
             </form>
           </div>

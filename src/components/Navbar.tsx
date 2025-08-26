@@ -5,7 +5,7 @@ import Link from "next/link"
 export const Navbar = () => {
   return (
 
-    <nav className=" w-full p-4 z-font-medium text-black z-99 text-zinc-300 bg-black transition-all ">
+    <nav className=" w-full p-4 z-font-medium text-black z-99 text-zinc-300 bg-black transition-all fixed">
       <div className="container mx-auto">
         <div className="flex items-center justify-between">
           {/* Logo */}
